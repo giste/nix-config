@@ -6,13 +6,13 @@
     ./hardware-configuration.nix # HW configuration
     ../../modules/core
     ../../modules/hardware/gpu/nvidia.nix
-    ../../modules/hardware/kernel.nix
+    #../../modules/hardware/kernel.nix
     ../../system/wm/gnome.nix
   ];
 
   # Define config options.
   hostname = "nixos";
-  gpu = "nvidia";
+  #gpu = "nvidia";
   hostUsers = [
     {
       login = "nacho";

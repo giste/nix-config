@@ -1,5 +1,13 @@
-{config, ...}:
+{ config, ... }:
+
 {
+  imports = [
+    ../kernel.nix
+  ];
+
+  # Define gpu type
+  gpu = "nvidia";
+
   hardware.nvidia = {
 
     # Modesetting is required.
