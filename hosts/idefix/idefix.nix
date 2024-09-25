@@ -6,13 +6,11 @@
     ./hardware-configuration.nix # HW configuration
     ../../modules/core
     ../../modules/hardware/gpu/nvidia.nix
-    #../../modules/hardware/kernel.nix
     ../../system/wm/gnome.nix
   ];
 
   # Define config options.
   hostname = "nixos";
-  #gpu = "nvidia";
   hostUsers = [
     {
       login = "nacho";
@@ -27,29 +25,11 @@
     }
   ];
   
-  # sops.secrets = {
-  #   "users/${userSettings.userName}/passwd".neededForUsers = true;
-  # };
-
   # Enable CUPS to print documents.
   # services.printing.enable = true;
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  # users = {
-  #   mutableUsers = false;
-  #   users.${userSettings.userName} = {
-  #     description = userSettings.name;
-  #     uid = 1000;
-  #     isNormalUser = true;
-  #     # initialPassword = "qwerty01";
-  #     hashedPasswordFile = config.sops.secrets."users/${userSettings.userName}/passwd".path;
-  #     extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
-  #     packages = with pkgs; [];
-  #   }; 
-  # };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -75,11 +55,6 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
-
-  # Copy the NixOS configuration file and link it from the resulting system
-  # (/run/current-system/configuration.nix). This is useful in case you
-  # accidentally delete configuration.nix.
-  # system.copySystemConfiguration = true;
 
   # This option defines the first version of NixOS you have installed on this particular machine,
   # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.
