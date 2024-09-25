@@ -62,8 +62,6 @@
   in {
     nixosConfigurations = {
 
-      #nixos = import ./hosts/idefix { inherit inputs systemSettings userSettings; };
-
       nixos = let
         system = "x86_64-linux";
         # Set nixpkgs-channel to nixpkgs or nixpkgs-stable
@@ -76,7 +74,7 @@
       in nixpackages.lib.nixosSystem {
         inherit system pkgs lib;
         modules = [ 
-          ./hosts/idefix/idefix.nix
+          ./hosts/idefix
         ];
         specialArgs = {
           inherit systemSettings;
