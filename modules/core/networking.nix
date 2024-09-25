@@ -1,17 +1,9 @@
 { config, lib, ... }:
 
 {
-  options = {
-    hostname = lib.mkOption {
-      type = lib.types.str;
-      description = "Name of the host";
-      #default = "nixos";
-    };
-  };
-
   config = {
     # Define your hostname.
-    networking.hostName = config.hostname;
+    networking.hostName = config.host.name;
 
     # Pick only one of the below networking options.
     # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.

@@ -7,5 +7,6 @@
     git
     wget
     curl
+    home-manager
   ];
 }
