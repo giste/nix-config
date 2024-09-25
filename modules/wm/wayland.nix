@@ -1,4 +1,4 @@
-{ config, systemSettings, ... }:
+{ config, lib, ... }:
 
 {
   imports = [
@@ -8,9 +8,9 @@
   services.xserver = {
     enable = true;
     xkb = {
-      layout = systemSettings.layout;
-      model = "pc105";
-      options = "eurosign:e";
+      layout = lib.mkDefault "es";
+      model = lib.mkDefault "pc105";
+      options = lib.mkDefault "eurosign:e";
     };
   };
 }

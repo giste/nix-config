@@ -4,7 +4,6 @@
 {
   imports = [
     ./hardware-configuration.nix # HW configuration
-    #../common
     ../../modules/core
     ../../modules/hardware/gpu/nvidia.nix
     ../../modules/wm/gnome.nix
