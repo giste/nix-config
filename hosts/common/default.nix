@@ -13,9 +13,10 @@
         description = "First version of NixOS installed on this host.";
       };
 
-      gpu = mkOption {
-        type = types.enum [ "none" "nvidia" ];
-        description = "GPU of the host.";
+      type = mkOption {
+        type = types.enum [ "server" "desktop" ];
+        description = "Host type: server | desktop";
+        default = "server";
       };
 
       users = mkOption {
@@ -49,7 +50,6 @@
 
   imports = [
     ../../modules/core
-    #../../modules/hardware/gpu/${config.host.gpu}.nix
   ];
 
   config = {

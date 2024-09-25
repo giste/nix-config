@@ -14,7 +14,7 @@
   host = {
     name = "nixos";
     stateVersion = "24.05";
-    gpu = "nvidia";
+    type = "desktop";
     users = [
       {
         login = "nacho";

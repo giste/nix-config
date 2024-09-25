@@ -12,6 +12,5 @@
       model = "pc105";
       options = "eurosign:e";
     };
-    videoDrivers = [ systemSettings.gpuType ];
   };
 }
