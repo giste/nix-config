@@ -6,7 +6,7 @@
     ./hardware-configuration.nix # HW configuration
     ../../modules/core
     ../../modules/hardware/gpu/nvidia.nix
-    ../../system/wm/gnome.nix
+    ../../modules/wm/gnome.nix
   ];
 
   # Define config options.
