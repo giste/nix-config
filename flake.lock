@@ -42,6 +42,24 @@
         "type": "github"
       }
     },
+    "nix-secrets": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1727097850,
+        "narHash": "sha256-SMr+U/jO3s3yMyPbg5AY8OOu6IRSB4TzT3GzeNPBuAU=",
+        "ref": "main",
+        "rev": "db1b934f97950ddcff50e039cb207a1bec650271",
+        "shallow": true,
+        "type": "git",
+        "url": "ssh://git@github.com/giste/nix-secrets.git"
+      },
+      "original": {
+        "ref": "main",
+        "shallow": true,
+        "type": "git",
+        "url": "ssh://git@github.com/giste/nix-secrets.git"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1726243404,
@@ -76,6 +94,7 @@
       "inputs": {
         "home-manager": "home-manager",
         "home-manager-stable": "home-manager-stable",
+        "nix-secrets": "nix-secrets",
         "nixpkgs": "nixpkgs",
         "nixpkgs-stable": "nixpkgs-stable",
         "sops-nix": "sops-nix"

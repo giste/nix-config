@@ -26,6 +26,12 @@
         nixpkgs-stable.follows = "nixpkgs-stable";
       };
     };
+
+    ###### Secrets repo ######
+    nix-secrets = {
+      url = "git+ssh://git@github.com/giste/nix-secrets.git?shallow=1&ref=main";
+      flake = false;
+    };
   };
 
   outputs = inputs@{ self, nixpkgs, nixpkgs-stable, home-manager, home-manager-stable, sops-nix, ... }:

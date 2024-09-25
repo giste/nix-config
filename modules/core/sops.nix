@@ -1,12 +1,14 @@
 { inputs, config, lib, ... }:
 
-{
+let
+  secretsPath = builtins.toString inputs.nix-secrets;
+in {
   imports = [
     inputs.sops-nix.nixosModules.sops
   ];
   
   sops = {
-    defaultSopsFile = lib.mkDefault ../../secrets/secrets.yaml;
+    defaultSopsFile = lib.mkDefault "${secretsPath}/secrets.yaml";
     validateSopsFiles = lib.mkDefault false;
     
     age = {
