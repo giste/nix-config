@@ -10,5 +10,6 @@
     ./packages.nix
     ./sops.nix
     ./users.nix
+    ./sudo.nix
   ];
 }
