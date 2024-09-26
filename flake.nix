@@ -75,9 +75,23 @@
         inherit system pkgs lib;
         modules = [ 
           ./hosts/idefix
+          home-manager-stable.nixosModules.home-manager {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+
+            #home-manager.users.nacho = import ./user/home.nix;
+
+            # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
+            home-manager.extraSpecialArgs = {
+              inherit systemSettings;
+              inherit userSettings;
+            };
+          }
         ];
         specialArgs = {
           inherit inputs;
+          inherit systemSettings;
+          inherit userSettings;
         };
       };
 

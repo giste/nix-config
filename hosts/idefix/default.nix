@@ -7,6 +7,7 @@
     ../../modules/core
     ../../modules/hardware/gpu/nvidia.nix
     ../../modules/wm/gnome.nix
+    ../../users
   ];
 
   # Define config options.
@@ -20,11 +21,11 @@
         uid = 1000;
         extraGroups = [ "wheel" "networkmanager" ];
       }
-      {
-        login = "gemma";
-        name = "Gemma";
-        extraGroups = [ "networkmanager" ];
-      }
+      # {
+      #   login = "gemma";
+      #   name = "Gemma";
+      #   extraGroups = [ "networkmanager" ];
+      # }
     ];
   };
 
