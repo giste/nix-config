@@ -7,6 +7,7 @@
     git
     wget
     curl
+    age
     home-manager
   ];
 }
