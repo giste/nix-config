@@ -3,6 +3,7 @@
 {
   imports = [
     ./git.nix
+    ./sops.nix
     ../../user/wm/gnome.nix
     ../../user/apps/vscode.nix
     ../../user/browsers/firefox.nix
