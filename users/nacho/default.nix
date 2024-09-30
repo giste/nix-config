@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ../../user/apps/git.nix
+    ./git.nix
     ../../user/wm/gnome.nix
     ../../user/apps/vscode.nix
     ../../user/browsers/firefox.nix
