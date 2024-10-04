@@ -15,7 +15,10 @@ in {
 
     secrets = {
       "users/nacho/ssh_key" = {
-        path = "/home/nacho/.ssh/id_ed25519_giste";
+        path = "/home/nacho/.ssh/id_ed25519";
+      };
+      "users/nacho/ssh_key_pub" = {
+        path = "/home/nacho/.ssh/id_ed25519.pub";
       };
     };
   };
