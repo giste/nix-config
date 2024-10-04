@@ -1,10 +1,10 @@
-{ ... }:
+{ lib, ... }:
 
 {
   programs.git = {
     enable = true;
     extraConfig = {
-      init.defaultBranch = "main";
+      init.defaultBranch = lib.mkDefault "main";
     };
   };
 }
