@@ -14,8 +14,9 @@
         isNormalUser = true;
         description = user.name;
         uid = user.uid;
-        password = "nixos"; # Overridden if sops is working
+        #password = "nixos"; # Overridden if sops is working
         hashedPasswordFile = config.sops.secrets."users/${user.login}/passwd".path;
+        password = lib.mkIf (config.users.users.${user.login} == null) "nixos";
         extraGroups = user.extraGroups; 
       }) config.host.users);
     };
