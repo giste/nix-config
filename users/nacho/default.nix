@@ -4,9 +4,10 @@
   imports = [
     ./git.nix
     ./sops.nix
+    ../common/firefox.nix
     ../../user/wm/gnome.nix
     ../../user/apps/vscode.nix
-    ../../user/browsers/firefox.nix
+    #../../user/browsers/firefox.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
