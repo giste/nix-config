@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   imports = [
@@ -7,15 +7,15 @@
   ];
   
   # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  services.xserver.displayManager.gdm.enable = lib.mkDefault true;
+  services.xserver.desktopManager.gnome.enable = lib.mkDefault true;
   
   xdg.portal = {
-    enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gnome ];
+    enable = lib.mkDefault true;
+    extraPortals = lib.mkDefault [ pkgs.xdg-desktop-portal-gnome ];
   };
   
-  environment.systemPackages = [
+  environment.systemPackages = lib.mkDefault [
     pkgs.xdg-desktop-portal-gnome
   ];
 }
