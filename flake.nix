@@ -35,31 +35,7 @@
   };
 
   outputs = inputs@{ self, nixpkgs-unstable, nixpkgs-stable, home-manager-unstable, home-manager-stable, sops-nix, ... }:
-  let
-    # ------ System settings ------ 
-    systemSettings = {
-      system = "x86_64-linux"; # system arch
-      hostName = "nixos"; # hostname
-      timeZone = "Europe/Madrid"; # select timezone
-      locale = "es_ES.UTF-8"; # select locale
-      layout = "es"; # keyboard layout
-      efiMount = "/boot"; # mount path for efi boot partition
-      gpuType = "nvidia"; # amd, intel or nvidia
-      wm = "gnome"; # window manager to use
-    };
-    
-    # ------ User settings ------
-    userSettings = {
-      userName = "nacho"; # login name
-      name = "Nacho"; # name to show
-      gitName = "Giste";
-      gitEmail = "giste.trappiste@gmail.com";
-      dotFilesDir = "/home/nacho/.dotfiles"; # dir for config files
-    };
-    
-    # system = "x86_64-linux";
-    # pkgs = nixpkgs.legacyPackages.${systemSettings.system};
-  in {
+  {
     nixosConfigurations = {
 
       nixos = let
@@ -83,15 +59,11 @@
             # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
             home-manager.extraSpecialArgs = {
               inherit inputs;
-              inherit systemSettings;
-              inherit userSettings;
             };
           }
         ];
         specialArgs = {
           inherit inputs;
-          inherit systemSettings;
-          inherit userSettings;
         };
       };
 
