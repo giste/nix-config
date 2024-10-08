@@ -4,8 +4,8 @@
   imports = [
     ./git.nix
     ./sops.nix
+    ../common/gnome.nix
     ../common/firefox.nix
-    ../../user/wm/gnome.nix
     ../common/vscode.nix
   ];
 
