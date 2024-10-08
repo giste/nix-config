@@ -41,8 +41,8 @@
       nixos = let
         system = "x86_64-linux";
         # Set channel for packages and home-manager
-        nixPackages = nixpkgs-stable;
-        homeManager = home-manager-stable;
+        nixPackages = nixpkgs-unstable;
+        homeManager = home-manager-unstable;
         pkgs = import nixPackages {
           inherit system;
           config.allowUnfree = true;

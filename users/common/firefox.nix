@@ -3,6 +3,7 @@
 {
   programs.firefox = {
     enable = true;
+    #languagePacks = [ "es-ES" ];
 
     policies = {
       DisableTelemetry = true;
@@ -12,7 +13,6 @@
       SearchBar = "separate";
     };
 
-    #languagePacks = [ "es-ES" ];
     profiles = {
       default = {
         id = 0;
