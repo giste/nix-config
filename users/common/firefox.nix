@@ -41,6 +41,7 @@
           "distribution.searchplugins.defaultLocale" = "es-ES";
           "general.useragent.locale" = "es-ES";
           "intl.locale.requested" = "es-ES,en-US";
+          "browser.translations.automaticallyPopup" = false;
         };
 
         search = {
