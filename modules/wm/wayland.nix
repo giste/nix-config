@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ../hardware/opengl.nix
+    ../hardware/graphics.nix
   ];
   
   services.xserver = {
