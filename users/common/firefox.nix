@@ -23,10 +23,6 @@
         SponsoredPocket = false;
         Snippets = false;
       };
-
-      Preferences = {
-        "widget.use-xdg-desktop-portal.file-picker" = 1; # Use new gtk file picker instead of legacy one
-      };
     };
 
     profiles = {
@@ -42,6 +38,33 @@
           "general.useragent.locale" = "es-ES";
           "intl.locale.requested" = "es-ES,en-US";
           "browser.translations.automaticallyPopup" = false;
+          "browser.uiCustomization.state" = builtins.toJSON {
+            placements = {
+              widget-overflow-fixed-list = [];
+              toolbar-menubar = [ "menubar-items" ];
+              PersonalToolbar = [ "personal-bookmarks" ];
+              nav-bar =
+              [
+                "back-button"
+                "forward-button"
+                "home-button"
+                "stop-reload-button"
+                "urlbar-container"
+                "search-container"
+                "bookmarks-menu-button"
+                "downloads-button"
+                "unified-extensions-button"
+              ];
+              TabsToolbar =
+              [
+                "firefox-view-button"
+                "tabbrowser-tabs"
+                "new-tab-button"
+              ];
+            };
+            currentVersion = 20;
+            newElementCount = 3;
+          };
         };
 
         search = {
@@ -50,6 +73,7 @@
           privateDefault = "DuckDuckGo";
           order = ["DuckDuckGo" "Google"];
         };
+
       };
     };
   };
