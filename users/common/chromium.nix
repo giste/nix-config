@@ -4,7 +4,7 @@
   programs.chromium = {
     enable = true;
     extensions = [
-      { id = "nngceckbapebfimnlniiiahkandclblb"; }
+      { id = "nngceckbapebfimnlniiiahkandclblb"; } # Bitwarden
     ];
   };
 }
