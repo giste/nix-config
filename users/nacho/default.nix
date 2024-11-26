@@ -7,6 +7,7 @@
     ../common/gnome.nix
     ../common/firefox.nix
     ../common/vscode.nix
+    ../common/chromium.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
